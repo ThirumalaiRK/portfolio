@@ -1,0 +1,63 @@
+@keyframes borderGradient {
+  0% { border-image-source: linear-gradient(0deg, var(--primary), var(--secondary)); }
+  25% { border-image-source: linear-gradient(90deg, var(--primary), var(--secondary)); }
+  50% { border-image-source: linear-gradient(180deg, var(--primary), var(--secondary)); }
+  75% { border-image-source: linear-gradient(270deg, var(--primary), var(--secondary)); }
+  100% { border-image-source: linear-gradient(360deg, var(--primary), var(--secondary)); }
+}
+
+@keyframes patternShift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+@keyframes iconPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+.hover\:border-gradient-animate:hover {
+  animation: borderGradient 4s linear infinite;
+}
+
+.bg-pattern-shift {
+  animation: patternShift 20s linear infinite;
+}
+
+.icon-pulse:hover .service-icon {
+  animation: iconPulse 1s ease-in-out infinite;
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, var(--secondary) 0%, transparent 60%);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  animation: ripple 1s ease-out;
+}
+
+.text-highlight {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.5s ease;
+}
+
+.text-highlight:hover {
+  background-position: 0 0;
+}

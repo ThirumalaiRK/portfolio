@@ -1,0 +1,77 @@
+/* Custom Scrollbar Styles */
+.certificates-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--neutral-800);
+}
+
+.certificates-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.certificates-scroll::-webkit-scrollbar-track {
+  background: var(--neutral-800);
+  border-radius: 3px;
+}
+
+.certificates-scroll::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+.certificates-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* Fade Edges */
+.fade-edges {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+/* Certificate Card Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 4 - 1.5rem * 4));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Hover Effects */
+.certificate-card {
+  transition: transform 0.3s ease-out;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Background Pattern */
+.hex-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' stroke-width='2' stroke='%2332245A' fill='none' fill-rule='evenodd' opacity='0.1'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
