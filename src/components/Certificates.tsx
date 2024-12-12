@@ -1,25 +1,29 @@
 import { Award } from 'lucide-react'; 
 import certificateImages from './certificateImages/GuviCertification.png';
+import certificate2 from './certificateImages/accenture Software Engineering Job Simulation.jpg'
+import certificate3 from './certificateImages/Aws hosting architecture.jpg'
 
 const certificates = [
   {
-    title: "Pyhton",
+    title: "Python",
     image: certificateImages,
     date: "2023",
     issuer: "GUVI"
   },
   {
-    title: "AI-Powered Shopping ads Certification",
-    image: "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/124117106",
+    title: "Accenture Software Engineering",
+    image: certificate2,
     date: "2024",
-    issuer: "Google Skillshop"
+    issuer: "Forage"
   },
+
   {
-    title: "Google Ads - Measurement Certification",
-    image: "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/124149660",
+    title: "Aws hosting architecture",
+    image: certificate3,
     date: "2024",
-    issuer: "Google Skillshop"
+    issuer: "Forage"
   },
+
   {
     title: "Google Ads Search Certification",
     image: "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/124173985",
